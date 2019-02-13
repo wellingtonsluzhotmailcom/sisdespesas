@@ -23,14 +23,12 @@ public class Conexao {
     public static void startServer() throws SQLException {
         ConnectionData data = ConnectionData.read();
         if (data != null) {
-            if (data.getModoConexao() == 1) {
                 // start the TCP Server
                 Conexao.server = Server.createTcpServer(
                         "-tcpPort", data.getPortaTcp(),
                         "-tcpAllowOthers",
                         "-tcpDaemon"
                 ).start();
-            }
         }
     }
 
