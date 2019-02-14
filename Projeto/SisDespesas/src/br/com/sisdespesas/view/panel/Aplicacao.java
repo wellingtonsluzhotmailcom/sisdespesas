@@ -11,6 +11,7 @@ import br.com.sisdespesas.view.internal.UsuarioLista;
 import br.com.sisdespesas.view.modal.CadastroConexao;
 import br.com.sisdespesas.view.modal.CadastroEmpresa;
 import br.com.sisdespesas.view.modal.GraficoAnual;
+import br.com.sisdespesas.view.modal.GraficoCentroCusto;
 import br.com.sisdespesas.view.modal.GraficoPeriodo;
 import br.com.sisdespesas.view.modal.RealizarBackup;
 import br.com.sisdespesas.view.modal.RealizarUpload;
@@ -27,7 +28,7 @@ import javax.swing.JInternalFrame;
  * @author AutoPecasLuz
  */
 public class Aplicacao extends javax.swing.JPanel {
-    
+
     private Janela janela;
 
     /**
@@ -92,6 +93,8 @@ public class Aplicacao extends javax.swing.JPanel {
         jButton18 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         jButton19 = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        jButton20 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -412,7 +415,7 @@ public class Aplicacao extends javax.swing.JPanel {
         jButton19.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButton19.setForeground(new java.awt.Color(49, 43, 103));
         jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sisdespesas/img/centro_custo.png"))); // NOI18N
-        jButton19.setText("Centro de Custo");
+        jButton19.setText("C.C.");
         jButton19.setBorderPainted(false);
         jButton19.setContentAreaFilled(false);
         jButton19.setFocusable(false);
@@ -425,6 +428,28 @@ public class Aplicacao extends javax.swing.JPanel {
             }
         });
         jToolBar3.add(jButton19);
+
+        jLabel15.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel15.setText("       ");
+        jToolBar3.add(jLabel15);
+
+        jButton20.setBackground(new java.awt.Color(255, 255, 255));
+        jButton20.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton20.setForeground(new java.awt.Color(49, 43, 103));
+        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sisdespesas/img/pie-chart.png"))); // NOI18N
+        jButton20.setText("Gráfico C.C.");
+        jButton20.setBorderPainted(false);
+        jButton20.setContentAreaFilled(false);
+        jButton20.setFocusable(false);
+        jButton20.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton20.setIconTextGap(8);
+        jButton20.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
+        jToolBar3.add(jButton20);
 
         jTabbedPane1.addTab("RELATÓRIOS", jToolBar3);
 
@@ -517,6 +542,10 @@ public class Aplicacao extends javax.swing.JPanel {
         RelatorioCentroCusto.open(janela);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton19ActionPerformed
 
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        GraficoCentroCusto.open(janela);          // TODO add your handling code here:
+    }//GEN-LAST:event_jButton20ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton10;
@@ -529,6 +558,7 @@ public class Aplicacao extends javax.swing.JPanel {
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
+    private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
@@ -538,6 +568,7 @@ public class Aplicacao extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -577,5 +608,5 @@ public class Aplicacao extends javax.swing.JPanel {
             internal.requestFocusInWindow();
         }
     }
-    
+
 }
